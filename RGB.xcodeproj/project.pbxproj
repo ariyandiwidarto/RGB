@@ -13,6 +13,7 @@
 		3B5665201CFEC32700665F5E /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B56651F1CFEC32700665F5E /* Curry.framework */; };
 		3B5665221CFEC36800665F5E /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5665211CFEC36800665F5E /* Nimble.framework */; };
 		3B5665241CFEC37500665F5E /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5665231CFEC37500665F5E /* Quick.framework */; };
+		3B5665271CFECA7D00665F5E /* RGBUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5665261CFECA7D00665F5E /* RGBUIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		3B56651F1CFEC32700665F5E /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = "Carthage/Checkouts/Curry/build/Debug-iphoneos/Curry.framework"; sourceTree = "<group>"; };
 		3B5665211CFEC36800665F5E /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		3B5665231CFEC37500665F5E /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
+		3B5665261CFECA7D00665F5E /* RGBUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBUIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				3B5665081CFE9C7F00665F5E /* RGB.h */,
 				3B56650A1CFE9C7F00665F5E /* Info.plist */,
+				3B5665261CFECA7D00665F5E /* RGBUIColor.swift */,
 			);
 			path = RGB;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5665271CFECA7D00665F5E /* RGBUIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +334,7 @@
 		3B56651A1CFE9C7F00665F5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -344,12 +349,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ice.ariyandi.RGB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3B56651B1CFE9C7F00665F5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
